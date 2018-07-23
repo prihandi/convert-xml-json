@@ -1,16 +1,17 @@
 class HomeController < ApplicationController
 
   def index
-    respond_to do |format|
-      format.xml {
-        p format
-        render xml: welcome and return
-      }
-      format.json {
-        p "b"
-        render json: welcome and return
-      }
-        
+    begin 
+      respond_to do |format|
+        format.xml {
+          render xml: welcome and return
+        }
+        format.json {
+          render json: welcome and return
+        }
+      end
+    rescue Exception
+      render json: welcome and return
     end
   end
 
