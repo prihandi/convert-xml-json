@@ -1,24 +1,23 @@
-# README
+# XML-JSON Converter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a simple service converting .
 
-Things you may want to cover:
+This app build with [Rails](http://rubyonrails.org) framework.
 
-* Ruby version
+## How to Setup
 
-* System dependencies
+You have to install [Ruby](https://www.ruby-lang.org) version ` >= 2.4.1` and [Bundler](http://bundler.io) first
 
-* Configuration
+- clone/download this repository
 
-* Database creation
+- run `bundle install`
 
-* Database initialization
+- run you Rails server with `rails s`
 
-* How to run the test suite
+## Deployment
 
-* Services (job queues, cache servers, search engines, etc.)
+You can deploy it on [Heroku](http://heroku.com) instantly by clicking this button
 
-* Deployment instructions
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-* ...
+or you can simply deploy to your hosting provider like another Ruby on Rails app.
