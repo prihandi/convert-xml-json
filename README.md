@@ -6,13 +6,18 @@ This app build with [Rails](http://rubyonrails.org) framework.
 
 ## How to Setup
 
-You have to install [Ruby](https://www.ruby-lang.org) version ` >= 2.4.1` and [Bundler](http://bundler.io) first
+You have to install [Ruby](https://www.ruby-lang.org) version `>= 2.4.1` and [Bundler](http://bundler.io) first
 
 - clone/download this repository
 
 - run `bundle install`
 
 - run you Rails server with `rails s`
+
+## How to Test
+
+Run `rails test` it will run the test(currently it's only integration test)
+
 
 ## Deployment
 
