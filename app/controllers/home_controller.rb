@@ -1,14 +1,13 @@
 class HomeController < ApplicationController
 
   def index
+    self.content_type = "application/json"
     begin 
-      respond_to do |format|
-        format.xml {
-          render xml: welcome and return
-        }
-        format.json {
-          render json: welcome and return
-        }
+      if request.content_type =~ /json/
+        self.content_type = "application/xml"
+        render xml: welcome and return
+      else
+        render json: welcome and return
       end
     rescue Exception
       render json: welcome and return

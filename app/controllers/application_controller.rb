@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
-  include ActionController::MimeResponds
 
+  rescue_from ActionController::RoutingError,
+    with: :page_not_found
   rescue_from ActionController::ParameterMissing,
     with: :parameter_missing
   rescue_from ArgumentError,
@@ -9,16 +10,8 @@ class ApplicationController < ActionController::API
     with: :invalid_type
   rescue_from ActionController::UnpermittedParameters,
     with: :parameter_missing
-  rescue_from ActiveModel::UnknownAttributeError,
-    with: :parameter_missing
-  rescue_from ActiveRecord::RecordInvalid,
-    with: :parameter_missing
-    rescue_from ActionController::RoutingError,
-    with: :page_not_found
 
-  private
-
-  def page_not_found(error)
+  def page_not_found
     render json: {
       error: {
         message: 'Not Found'
